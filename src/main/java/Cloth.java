@@ -5,8 +5,12 @@ public class Cloth {
     private Integer size;
     private String company;
 
-    public Cloth() {
+    public Cloth(){
 
+    }
+
+    public void clothDescription() {
+        System.out.println("Cloth description: type: " + typeOfCloth + ", completion date: " + completionDate + ", size: " + size + ", company " + company);
     }
 
 
