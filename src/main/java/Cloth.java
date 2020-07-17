@@ -4,7 +4,11 @@ public class Cloth {
     private Integer completionDate;
     private Integer size;
     private String company;
-    
+
+    public Cloth() {
+
+    }
+
 
     public String getTypeOfCloth() {
         return typeOfCloth;
