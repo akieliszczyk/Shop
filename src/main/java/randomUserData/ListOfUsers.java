@@ -2,9 +2,9 @@ package randomUserData;
 
 import com.github.javafaker.Faker;
 
-import java.util.List;
-
 public class ListOfUsers {
+
+    private String message;
     UserData userData = new UserData();
     Faker faker = new Faker();
 
@@ -27,5 +27,11 @@ public class ListOfUsers {
         return users;
     }
 
+    public void listUserData() {
 
+        for(int i = 0; i<20; i++) {
+            message = "Hi I am " + users[i][0] + ". I am " + users[i][1] + ". Please subscribe my channel using " + users[i][2] + " email.";
+            System.out.println(message);
+        }
+    }
 }

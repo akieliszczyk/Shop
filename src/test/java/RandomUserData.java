@@ -9,6 +9,8 @@ public class RandomUserData {
         ListOfUsers listOfUsers = new ListOfUsers();
 
         listOfUsers.create20users();
+        listOfUsers.listUserData();
+
     }
 
 }
