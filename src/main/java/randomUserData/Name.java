@@ -22,9 +22,9 @@ public class Name {
         return finalName;
     }
 
-    public void setFinalName(String finalName) {
-        this.finalName = finalName;
-    }
+//    public void setFinalName(String finalName) {
+//        this.finalName = finalName;
+//    }
 
     public void setName(String name) {
         this.name = name;
