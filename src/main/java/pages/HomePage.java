@@ -15,7 +15,8 @@ public class HomePage extends BasePage {
     @FindBy(id = "slider_row")
     private WebElement mainWindow;
 
-    WebElement buttonSignIn = driver.findElement(By.xpath("//div/a[@class='login']"));
+    @FindBy(xpath = "//a[@class='login']")
+    private WebElement buttonSignIn;
 
     @FindBy(id = "contact-link")
     private WebElement buttonContact;
@@ -30,15 +31,9 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    public HomePage findingElements() {
-        Assert.assertTrue(mainWindow.isDisplayed());
-        System.out.println("Main window is displayed");
-        Assert.assertTrue(buttonSignIn.isDisplayed());
-        System.out.println("Button Sing in is displayed");
-        Assert.assertTrue(buttonContact.isDisplayed());
-        System.out.println("Button contact is displayed");
-        Assert.assertTrue(barCategories.isDisplayed());
-        System.out.println("Button categories is displayed");
-        return this;
+    public SignInPage openSignInPage() {
+        buttonSignIn.click();
+        return new SignInPage(driver);
     }
+
 }
