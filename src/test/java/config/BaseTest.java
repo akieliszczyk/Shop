@@ -1,8 +1,8 @@
 package config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utility.Constants;
@@ -13,7 +13,7 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @Before
+    @BeforeEach
     public void openPage() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -22,7 +22,7 @@ public class BaseTest {
         driver.get(Constants.shopURL);
     }
 
-    @After
+    @AfterEach
     public void closeBrowser() {
         driver.quit();
     }
