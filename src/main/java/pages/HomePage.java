@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
     @FindBy(id = "slider_row")
     private WebElement mainWindow;
 
-    @FindBy(xpath = "//a[@class='login']")
+    @FindBy(xpath = "//div//a[@title='Log in to your customer account']")
     private WebElement buttonSignIn;
 
     @FindBy(id = "contact-link")
@@ -33,7 +33,13 @@ public class HomePage extends BasePage {
 
     public SignInPage openSignInPage() {
         buttonSignIn.click();
+        System.out.println("button clicked");
         return new SignInPage(driver);
+    }
+
+    public CustomerServicePage openCustomerServicePage() {
+        buttonContact.click();
+        return new CustomerServicePage(driver);
     }
 
 }
