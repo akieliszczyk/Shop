@@ -39,6 +39,7 @@ public class HomePage extends BasePage {
 
     public CustomerServicePage openCustomerServicePage() {
         buttonContact.click();
+        System.out.println("button clicked");
         return new CustomerServicePage(driver);
     }
 
